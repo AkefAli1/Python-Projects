@@ -1,0 +1,5 @@
+https://opentdb.com/
+use this to generate a json list
+paste it in data and options - code - reformat code
+then make it into a list of dictionaries 
+use the question and answer key value pairs and ignore the rest

@@ -1,0 +1,67 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+import random as r
+a= int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors."))
+ascii = [rock,paper,scissors]
+print(ascii[a])
+
+list = ["Rock","Paper","Scissors"]
+x = r.randint(0,2)
+comp = list[x]
+print("Computer chose")
+print(ascii[x])
+
+big = [['Rock', 'Rock'],['Rock', 'Paper'],['Rock', 'Scissors'],['Paper', 'Rock'],['Paper', 'Paper'],['Paper', 'Scissors'],['Scissors', 'Rock'],['Scissors', 'Paper'],['Scissors', 'Scissors']]
+# computer wins in big[1,5,6]
+# user wins in big[2,3,7]
+# draw in big[0,4,8]
+
+user = list[a]
+computer = list[x]
+game = str(user+" "+computer)
+game1 = game.split()
+#print(game1)
+ind = big.index(game1)
+
+if ind == 0 or ind == 4 or ind == 8:
+  print("The game is draw")
+elif ind == 2 or ind == 3 or ind == 7:
+  print("Congratulations! You Win")
+elif ind == 1 or ind == 5 or ind == 6:
+ print("Oh no! Computer won")
+
+
+
+
+
+#notes: .split() is to split a string with space to a list ['hi', 'akef]
+# list() is to convert a one word to a list of alphabets ['h','i','a','k','e','f']
+# ''.join(x) converts a list to a string
+# random.sample(x, len(x)) shuffles the given list
+
+
+
